@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".addActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:layout_marginBottom="20dp"
+        android:id="@+id/add_toolbar"
+        app:layout_constraintBottom_toTopOf="@id/edt_name"
+        android:layout_width="match_parent"
+        android:background="#00E2FF"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add movie"
+            android:textSize="30sp"
+            android:layout_marginVertical="10dp"
+            android:textColor="@color/white"/>
+    </androidx.appcompat.widget.Toolbar>
+    <EditText
+        android:layout_marginHorizontal="30dp"
+        android:id="@+id/edt_name"
+        android:padding="10dp"
+        android:layout_marginVertical="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Movie name"
+        app:layout_constraintTop_toBottomOf="@id/add_toolbar"
+        app:layout_constraintBottom_toTopOf="@id/edt_author"
+        android:background="@drawable/edt_fon"
+        style="@style/EdtStyle"
+        />
+    <EditText
+        android:id="@+id/edt_author"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Movie author"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginVertical="10dp"
+        android:padding="10dp"
+        app:layout_constraintBottom_toTopOf="@id/edt_about"
+        app:layout_constraintTop_toBottomOf="@id/edt_name"
+        android:background="@drawable/edt_fon"
+        style="@style/EdtStyle" />
+    <EditText
+        android:id="@+id/edt_about"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:hint="About movie"
+        android:gravity="start"
+        android:padding="10dp"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginVertical="10dp"
+        app:layout_constraintBottom_toTopOf="@id/btn_save"
+        app:layout_constraintTop_toBottomOf="@id/edt_author"
+        android:background="@drawable/edt_fon"
+        style="@style/EdtStyle" />
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_marginVertical="20dp"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:text="Save"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintVertical_bias="0.9"
+        app:layout_constraintHorizontal_bias="0.9"
+        android:backgroundTint="#66D6EF"
+        app:layout_constraintTop_toBottomOf="@id/edt_about"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
